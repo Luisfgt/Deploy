@@ -4,7 +4,8 @@ import axios from 'axios'
 import { useNavigate } from "react-router"
 import { useDispatch } from 'react-redux'
 import { loginUser } from "../../redux/reducers/userSlice"
-const URL = 'http://localhost:3009/users/users'
+axios.defaults.baseURL = 'http://localhost:3009/'
+const URL = '/users/users'
 
 
 const ModalLogin = ({ openModal, closeModal, login }) => {

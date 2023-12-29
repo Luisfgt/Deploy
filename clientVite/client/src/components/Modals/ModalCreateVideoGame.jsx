@@ -6,7 +6,8 @@ import Select from "react-select"
 import Card from "../Home/Card/Card"
 import { getAllVideoGames, setFilterGames } from "../../redux/reducers/videogameSlice"
 import validate from "./validateInfo"
-const URL_GET_ALL = 'http://localhost:3009/videogames'
+axios.defaults.baseURL = 'http://localhost:3009/'
+const URL_GET_ALL = '/videogames'
 
 
 const ModalCreateVideoGame = ({ modal, closeModal }) => {

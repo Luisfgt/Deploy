@@ -1,7 +1,8 @@
 import { useState } from "react"
 import './Modals.css'
 import axios from 'axios'
-const URL = 'http://localhost:3009/users'
+axios.defaults.baseURL = 'http://localhost:3009/'
+const URL = '/users'
 
 
 const ModalRegister = ({ openModal, closeModal }) => {

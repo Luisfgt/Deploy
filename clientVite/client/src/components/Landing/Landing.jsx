@@ -3,88 +3,19 @@ import luisCard from '../../assets/LUIS CARD.png'
 import { Link, scroller, Element } from 'react-scroll'
 import { useEffect, useRef, useState } from 'react'
 import TopBar from '../TopBar/TopBar'
-import { useDispatch, useSelector } from 'react-redux'
-import { setReferences, setScreen } from '../../redux/reducers/videogameSlice'
-import ModalLogin from '../Modals/modalLogin'
 import ModalRegister from '../Modals/modalRegister'
-import Select from 'react-select'
-
+import ModalLogin from '../Modals/modalLogin'
 
 
 const Landing = ({ login, logout }) => {
+    
 
     // const [pageP, setPageP] = useState('home')
-
     const aboutMeRef = useRef(null)
     const homeRef = useRef(null)
     const figmaRef = useRef(null)
     const [modal, setModal] = useState(false)
-    const [modalLogin, setModalLogin] = useState(false)
-
-    // Lógica para que la página funcione con un smooth scroll, pero que haré después
-    // const handleScroll = (scroll = null, scrolled) => {
-    //     console.log(scrolled);
-    //     const scrollY = () => {
-    //         if(!scrolled) return window.scrollY
-    //         else scroll
-    //     } 
-    //     console.log(pageP);
-    //     const scrollOnY = scrollY()
-    //     console.log(scrollOnY);
-
-
-    //     if (pageP === 'home' && scrollOnY > 150 && scrollOnY < 250) {
-    //         scroller.scrollTo('aboutSection', {
-    //             duration: 200,
-    //             smooth: true
-    //         })
-    //         setTimeout(() => {
-    //             window.removeEventListener('scroll', handleScroll);
-    //             setPageP('about')
-    //         }, 500);
-    //     }
-    //     if (pageP === 'about' && scrollOnY > 1050 && scrollOnY < 1100) {
-    //         scroller.scrollTo('homeSection', {
-    //             duration: 200,
-    //             smooth: true
-    //         })
-    //         setTimeout(() => {
-    //             window.removeEventListener('scroll', handleScroll);
-    //             setPageP('home')
-    //         }, 500);
-    //     }
-
-    //     if (pageP === 'about' && scrollOnY > 1101 && scrollOnY < 1200) {
-    //         scroller.scrollTo('figma', {
-    //             duration: 200,
-    //             smooth: true
-    //         })
-    //         setTimeout(() => {
-    //             window.removeEventListener('scroll', handleScroll);
-    //             setPageP('figma')
-    //         }, 500);
-    //     }
-
-    //     if (pageP === 'figma' && scrollOnY > 1990 && scrollOnY < 2050) {
-    //         scroller.scrollTo('aboutSection', {
-    //             duration: 200,
-    //             smooth: true
-    //         })
-
-    //         window.removeEventListener('scroll', handleScroll);
-    //         setTimeout(() => {
-    //             setPageP('about')
-    //         }, 500);
-    //     }
-    // }
-    // useEffect(() => {
-
-    //     window.addEventListener('scroll', handleScroll);
-
-    //     return () => {
-    //         window.removeEventListener('scroll', handleScroll);
-    //     };
-    // }, [pageP]);
+    const [modalLoginFlag, setModalLoginFlag] = useState(false)
 
     useEffect(() => {
         logout()
@@ -98,8 +29,8 @@ const Landing = ({ login, logout }) => {
                     closeModal={() => setModal(false)}
                 />
                 <ModalLogin
-                    openModal={modalLogin}
-                    closeModal={() => setModalLogin(false)}
+                    openModal={modalLoginFlag}
+                    closeModal={() => setModalLoginFlag(false)}
                     login={login}
                 />
                 <TopBar
@@ -107,9 +38,9 @@ const Landing = ({ login, logout }) => {
                     aboutRef={aboutMeRef}
                     figmaRef={figmaRef}
                     openModal={() => setModal(true)}
-                    openModalLogin={() => setModalLogin(true)}
+                    openModalLogin={() => setModalLoginFlag(true)}
                     modal={modal}
-                    modalLogin={modalLogin}
+                    modalLogin={modalLoginFlag}
                 />
                 <div className='background'>
                     <div className='backgroundAfter'></div>

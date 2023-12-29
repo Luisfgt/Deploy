@@ -2,8 +2,6 @@ import { useDispatch, useSelector } from 'react-redux'
 import './TopBarHome.css'
 import { useLocation } from 'react-router'
 import { changeInfo } from '../../../redux/reducers/InfoSlice'
-import { useEffect, useState } from 'react'
-import axios from 'axios'
 import SelectComponent from '../SelectComponent/SelectComponent'
 
 

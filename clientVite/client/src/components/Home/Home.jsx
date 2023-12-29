@@ -10,8 +10,9 @@ import { useLocation } from 'react-router'
 import CardsAll from './Cards/CardsAll'
 import Pagination from './Pagination/Pagination'
 import ModalCreateVideoGame from '../Modals/ModalCreateVideoGame'
-const URL_GET_ALL = 'http://localhost:3009/videogames'
-const URL_GENDER = 'http://localhost:3009/genres'
+axios.defaults.baseURL = 'http://localhost:3009/'
+const URL_GET_ALL = '/videogames'
+const URL_GENDER = '/genres'
 
 
 const Home = () => {
