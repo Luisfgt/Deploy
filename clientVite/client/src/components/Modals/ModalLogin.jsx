@@ -4,7 +4,7 @@ import axios from 'axios'
 import { useNavigate } from "react-router"
 import { useDispatch } from 'react-redux'
 import { loginUser } from "../../redux/reducers/userSlice"
-axios.defaults.baseURL = 'http://localhost:3009/'
+axios.defaults.baseURL = 'https://deploy-production-3bca.up.railway.app/'
 const URL = '/users/users'
 
 

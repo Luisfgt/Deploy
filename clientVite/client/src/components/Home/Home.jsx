@@ -10,7 +10,7 @@ import { useLocation } from 'react-router'
 import CardsAll from './Cards/CardsAll'
 import Pagination from './Pagination/Pagination'
 import ModalCreateVideoGame from '../Modals/ModalCreateVideoGame'
-axios.defaults.baseURL = 'http://localhost:3009/'
+axios.defaults.baseURL = 'https://deploy-production-3bca.up.railway.app/'
 const URL_GET_ALL = '/videogames'
 const URL_GENDER = '/genres'
 
