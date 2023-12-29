@@ -241,9 +241,8 @@ const ModalCreateVideoGame = ({ modal, closeModal }) => {
             }
             console.log(data);
             const createdGame = (await axios.post(URL_CREATE, { data })).data
-
-
-
+            console.log(createdGame);
+            console.log('actualizado');
             if (createdGame.status) {
                 setLoading(true)
                 await getAllVideoGamesBackend()
