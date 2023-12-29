@@ -1,0 +1,36 @@
+.backgroundHome {
+    display: grid;
+    grid-template-columns: 0.25fr 1fr;
+    grid-template-rows: 0.11fr 1fr;
+    width: 100vw;
+    height: 100vh;
+    background-color: #342A45;
+    z-index: 1;
+    overflow: hidden;
+}
+.cards{
+    grid-row: 2/3;
+    grid-column: 2/3;
+}
+
+.selectOverAll{
+    z-index: 900;
+}
+
+.sideBarOverAll{
+    z-index: 902;
+}
+
+.modalOverAll{
+    position: fixed;
+    z-index: 2000;
+}
+
+.chargeLoading{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #342A45;
+    width: 100vw;
+    height: 100vh;
+}

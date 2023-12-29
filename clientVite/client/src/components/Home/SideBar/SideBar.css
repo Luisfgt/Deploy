@@ -1,0 +1,78 @@
+.sideBarContainer {
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    padding: 3rem;
+    align-items: center;
+    justify-content: space-between;
+    width: 20vw;
+    height: 100vh;
+    background: #342A45;
+    box-shadow: -1px -33px 31.9px 8px rgba(0, 0, 0, 0.25);
+    z-index: 10;
+    gap: 1rem;
+}
+.spaceButtons{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.icons{
+    width: 2rem;
+    height: fit-content;
+}
+
+.buttonSide{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    height: 7vh;
+    width: 15vw;
+    color: white;
+    padding-left: 1.5rem;
+    gap: 1rem;
+    border-radius: 1rem;
+    transition: 500ms;
+    cursor: pointer;
+}
+.buttonSide:hover{
+    background-color: #272032;
+}
+
+.buttonSideOnClick{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    background: linear-gradient(178deg, #892DFF 1.76%, #641EBD 79.32%);
+    height: 7vh;
+    width: 15vw;
+    color: white;
+    padding-left: 1.5rem;
+    gap: 1rem;
+    border-radius: 1rem;
+    cursor: pointer;
+    transition: 500ms;
+    animation: buttonClick ease-out;
+}
+
+.textButton{
+    font-weight: 400;
+}
+
+.logOut{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid #ec3f90;
+    border-radius: 1rem;
+    color: white;
+    width: 15vw;
+    height: 7vh;
+    transition: 200ms;
+}
+
+.logOut:hover {
+    background-color: #ff4da0;
+
+}

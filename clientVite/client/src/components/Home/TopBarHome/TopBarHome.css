@@ -1,0 +1,96 @@
+.backgroundTopBarHome {
+    display: grid;
+    position: fixed;
+    grid-template-columns: 0.42fr 1fr 0.5fr;
+    top: 0;
+    left: 0;
+    background: #342A45;
+    box-shadow: -1px 2px 31.9px 8px rgba(0, 0, 0, 0.25);
+    width: 100vw;
+    height: 10vh;
+    color: white;
+}
+
+.user {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    justify-content: end;
+    align-items: center;
+    padding-right: 2.5rem;
+    grid-column: 3/4;
+    grid-row: 1/2;
+
+}
+
+.filters {
+    grid-column: 2/3;
+    grid-row: 1/2;
+    display: flex;
+    width: 100%;
+    height: 100%;
+    justify-content: flex-start;
+    align-items: center;
+    padding-right: 2rem;
+    gap: 1rem;
+}
+
+.search {
+    all: initial;
+    display: flex;
+    align-items: center;
+    padding-left: 1.5rem;
+    color: white;
+    background-color: rgba(209, 209, 209, 0.3);
+    border-radius: 1rem;
+    width: 15rem;
+    height: 3.5rem;
+    font-family: 'Inter', sans-serif;
+
+}
+
+.search::placeholder {
+    color: rgb(255, 255, 255, 0.5);
+    font-family: 'Inter', sans-serif;
+}
+
+.buttonsFilter {
+    width: 15rem;
+    height: 3.5rem;
+    border-radius: 1rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    background-color: #342A45;
+    color: white;
+    box-shadow: 3px 2px 4px 0px rgba(0, 0, 0, 0.25);
+    border: none;
+    font-size: 1rem;
+
+}
+
+.selectFinal {
+    position: fixed;
+    width: 10vw;
+    z-index: 100;
+}
+
+.createButtom{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+    width: 9vw;
+    height: 3.5rem;
+    border-radius: 1rem;
+    background: linear-gradient(178deg, #892DFF 1.76%, #641EBD 79.32%);
+    box-shadow: 3px 2px 4px 0px rgba(0, 0, 0, 0.25);
+    transition: 500ms;
+    cursor: pointer;
+}
+
+.createButtom:hover{
+    background: white;
+    color: #892DFF;
+}
+
+

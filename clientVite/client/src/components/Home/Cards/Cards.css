@@ -1,0 +1,307 @@
+.backgroundCard {
+    display: grid;
+    grid-template-rows: 1.1fr 1fr;
+    width: 100%;
+    height: 100%;
+    overflow-y: hidden;
+}
+
+.gameOfDayContainer {
+    display: flex;
+    transform: translate(0px, 30px);
+    position: relative;
+    grid-row: 1/2;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: flex-end;
+    overflow: visible;
+}
+
+.gameDayContainer {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    position: relative;
+    justify-content: center;
+    align-items: flex-start;
+    width: 76vw;
+    height: 43vh;
+    border-radius: 1rem;
+    transition: 500ms;
+    cursor: pointer;
+    background-color: #191919;
+    overflow: hidden;
+
+}
+
+
+
+.titleGames {
+    position: relative;
+    transform: translate(0px, 40px);
+    color: white;
+    font-size: 1.5rem;
+}
+
+.cardsContainer {
+    display: grid;
+    grid-template-rows: 0.2fr 1fr;
+    align-items: flex-start;
+    width: 100%;
+    height: 100%;
+    padding: 2.5rem;
+    overflow: hidden;
+}
+
+.imagesCon {
+    position: relative;
+    grid-column: 1/2;
+    grid-row: 1/2;
+    align-self: center;
+    justify-self: center;
+    width: 80vw;
+    height: 50vh;
+}
+
+.downFilter {
+    position: absolute;
+    bottom: 0;
+    width: 90vw;
+    height: 20vh;
+    z-index: 10;
+    background: linear-gradient(0deg, #0A0A0B 0%, rgba(0, 0, 0, 0.00) 99.61%);
+}
+
+.imagecar {
+    position: absolute;
+    width: 100%;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+
+.textTimer{
+    z-index: 100;
+}
+
+.name:nth-child(1){
+    animation: textAnimation 9s;
+    animation-delay: 0s;
+}
+
+.name:nth-child(2) {
+    animation: textAnimation 9s ;
+    animation-delay: 9s;
+
+}
+
+.name:nth-child(3) {
+    animation: textAnimation 9s ;
+    animation-delay: 18s;
+
+}
+
+.name:nth-child(4) {
+    animation: textAnimation 9s ;
+    animation-delay: 27s;
+}
+
+.name:nth-child(5) {
+    animation: textAnimation 9s;
+    animation-delay: 36s;
+}
+
+@keyframes textAnimation {
+
+    0%,
+    100% {
+        opacity: 0;
+    }
+
+    10%,
+    90% {
+        opacity: 1;
+    }
+}
+
+
+.imagecar:nth-child(1) {
+    animation: imagenAnimation 9s ;
+    animation-delay: 0s;
+}
+
+.imagecar:nth-child(2) {
+    animation: imagenAnimation 9s ;
+    animation-delay: 9s;
+
+}
+
+.imagecar:nth-child(3) {
+    animation: imagenAnimation 9s ;
+    animation-delay: 18s;
+
+}
+
+.imagecar:nth-child(4) {
+    animation: imagenAnimation 9s ;
+    animation-delay: 27s;
+
+}
+
+.imagecar:nth-child(5) {
+    animation: imagenAnimation 9s;
+    animation-delay: 36s;
+}
+.none {
+    display: none;
+}
+
+
+@keyframes imagenAnimation {
+
+    0%,
+    100% {
+        opacity: 0;
+    }
+
+    10%,
+    90% {
+        opacity: 1;
+    }
+}
+
+
+.name {
+    position: absolute;
+    color: rgb(255, 255, 255);
+    bottom: 2rem;
+    right: 2rem;
+    font-size: 2rem;
+    z-index: 11;
+    opacity: 0;
+}
+
+.newCards {
+    display: flex;
+    position: relative;
+    height: 16.2rem;
+    width: 100%;
+    max-width: 100rem;
+    gap: 2rem;
+    transition: 1000ms;
+    overflow: visible;
+}
+
+.containerNewCards {
+    display: flex;
+    position: relative;
+    width: 100%;
+    padding-top: 3.65rem;
+    padding-bottom: 1rem;
+    padding-left: 1rem;
+    height: 20rem;
+    max-width: 100%;
+    overflow: hidden;
+}
+
+.iconsSlider {
+    position: relative;
+    height: 50%;
+    left: 0.05rem;
+}
+
+.iconsSliderIzq {
+    position: relative;
+    height: 50%;
+    right: 0.05rem;
+}
+
+
+.buttonSlider {
+    all: initial;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 2rem;
+    width: 2rem;
+    border-radius: 1rem;
+    border: none;
+    background: #191919;
+    cursor: pointer;
+    transition: 5000ms;
+}
+
+.buttonSlider:hover {
+    background: linear-gradient(178deg, #892DFF 1.76%, #641EBD 79.32%);
+}
+
+
+.buttonAndTitleContainer {
+    display: flex;
+    justify-content: space-between;
+}
+
+.buttonsSlideContainer {
+    position: relative;
+    transform: translate(0px, 40px);
+    z-index: 100;
+    display: flex;
+    gap: 0.5rem;
+}
+
+
+.buttonSlider:disabled {
+    opacity: 0.6;
+    background-color: #191919;
+}
+
+.buttonSlider:disabled:hover {
+    background: #191919;
+}
+
+
+/* ALL CARDS DESIGN */
+
+.backgroundAllCards{
+    display: flex;
+
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+}
+
+.allCardsContainer{
+    display: flex;
+    width: 100%;
+    max-width: 100%;
+    flex-wrap: wrap;
+    overflow: scroll;
+    overflow-x: hidden;
+    height: 82vh;
+    padding-top: 2rem;
+    padding-left: 1.5rem;
+    gap: 0.5rem;
+}
+
+.pagination{
+    display: flex;
+    position: fixed;
+    justify-content: center;
+    align-items: center;
+    bottom: 0;
+    height: 5rem;
+    width: 100%;
+    z-index: 10;
+    gap: 1rem
+}
+
+.filterDown {
+    position: fixed;
+    z-index: 10;
+    bottom: 3.8rem;
+    height: 10rem;
+    width: 100%;
+    pointer-events: none;
+    background: linear-gradient(0deg, #342A45 0.43%, rgba(0, 0, 0, 0.00) 99.61%);
+}
+
