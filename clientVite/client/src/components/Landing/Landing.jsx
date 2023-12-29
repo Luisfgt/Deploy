@@ -3,8 +3,8 @@ import luisCard from '../../assets/LUIS CARD.png'
 import { Link, scroller, Element } from 'react-scroll'
 import { useEffect, useRef, useState } from 'react'
 import TopBar from '../TopBar/TopBar'
-import ModalRegister from '../Modals/modalRegister'
-import ModalLogin from '../Modals/modalLogin'
+import ModalRegister from '../Modals/ModalRegister.jsx'
+import ModalLogin from '../Modals/ModalLogin.jsx'
 
 
 const Landing = ({ login, logout }) => {
@@ -16,7 +16,7 @@ const Landing = ({ login, logout }) => {
     const figmaRef = useRef(null)
     const [modal, setModal] = useState(false)
     const [modalLoginFlag, setModalLoginFlag] = useState(false)
-
+    ModalLogin
     useEffect(() => {
         logout()
     }, [])
