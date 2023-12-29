@@ -1,7 +1,7 @@
 import { useState } from "react"
 import './Modals.css'
 import axios from 'axios'
-axios.defaults.baseURL = 'https://deploy-production-3bca.up.railway.app/'
+axios.defaults.baseURL = 'https://deploy-production-3bca.up.railway.app'
 const URL = '/users'
 
 
