@@ -20,12 +20,13 @@
 const server = require('./src/app.js');
 const getAllGenres = require('./src/controllers/genresController.js');
 const { conn } = require('./src/db.js');
+require('dotenv').config()
 const port = process.env.PORT || 3009;
 
 server.listen(port, async () => {
   await conn.sync({ alter: true })
   await getAllGenres()
-  console.log('%s listening at 3009'); // eslint-disable-line no-console
+  console.log('El servidor se está escuchando en el puerto', process.env.PORT ); // eslint-disable-line no-console
 });
 
 
