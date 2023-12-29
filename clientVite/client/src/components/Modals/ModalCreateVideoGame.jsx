@@ -1,7 +1,7 @@
 import axios from "axios"
 import { useEffect, useState } from "react"
 import { useDispatch, useSelector } from "react-redux"
-const URL_CREATE = 'http://localhost:3009/videogames'
+const URL_CREATE = '/videogames'
 import Select from "react-select"
 import Card from "../Home/Card/Card"
 import { getAllVideoGames, setFilterGames } from "../../redux/reducers/videogameSlice"
