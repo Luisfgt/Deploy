@@ -5,7 +5,7 @@ import Select from "react-select"
 import Card from "../Home/Card/Card"
 import { getAllVideoGames, setFilterGames } from "../../redux/reducers/videogameSlice"
 import validate from "./validateInfo"
-axios.defaults.baseURL = 'https://deploy-production-3bca.up.railway.app/'
+axios.defaults.baseURL = 'https://deploy-production-3bca.up.railway.app'
 const URL_CREATE = '/videogames'
 const URL_GET_ALL = '/videogames'
 
